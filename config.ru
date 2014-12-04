@@ -21,8 +21,8 @@ require 'split/dashboard'
 
 # Load app
 require "aiiiiiin"
-#run Aiiiiiin
+run Aiiiiiin
 
-run Rack::URLMap.new \
-"/"       => Aiiiiiin.new,
-"/split" => Split::Dashboard.new
+#run Rack::URLMap.new \
+#"/"       => Aiiiiiin.new,
+#"/split" => Split::Dashboard.new
