@@ -13,7 +13,7 @@ require "find"
   }
 end
 
-require 'split/dashboard'
+#require 'split/dashboard'
 
 # Split::Dashboard.use Rack::Auth::Basic do |username, password|
 #   username == 'admin' && password == 'password'
