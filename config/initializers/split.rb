@@ -16,7 +16,7 @@ end
 
 if ENV["REDISTOGO_URL"]
   uri = URI.parse(ENV["REDISTOGO_URL"])
-  namespace = ["split", "myapp", Rails.env].join(":")
+  namespace = ["split", "aiiiiiin", "Development"].join(":")
 
   redis = Redis.new(host: uri.host,
   port: uri.port,
