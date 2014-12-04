@@ -61,7 +61,25 @@ _public/stylesheets/main.css_
 _views/layout.erb_  
 _views/welcome.erb_
 
-### A/BテストフレームワークSplit適用
+### ActiveRecord対応
+
+```bash
+$ heroku addons:add heroku-postgresql:dev
+$ heroku config
+```
+_config/initializers/database.rb_  
+
+_Gemfile_
+```ruby
+gem 'pg'
+```
+
+```
+$ brew install postgresql
+$ bundle
+```
+
+### A/BテストフレームワークSplit対応
 
 _Gemfile_
 
@@ -101,3 +119,5 @@ end
 + [davatron5000/FitVids.js](https://github.com/davatron5000/FitVids.js)
 + [Hazel](http://c7.github.io/hazel/)
 + [Start Bootstrap](http://startbootstrap.com/template-overviews/landing-page/)
++ [Sinatra+ActiveRecord+MySQLで、簡単APIサーバ構築](http://qiita.com/u1_fukui/items/88c10d4d530ec6fbaaa1)
++ [Sinatra-ActiverecordをHerokuにPushする](http://qiita.com/myokkie/items/6f65db5d53f19d34a27c)

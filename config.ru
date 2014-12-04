@@ -13,6 +13,9 @@ require "find"
   }
 end
 
+# database config
+use ActiveRecord::ConnectionAdapters::ConnectionManagement
+
 #require 'split/dashboard'
 
 # Split::Dashboard.use Rack::Auth::Basic do |username, password|

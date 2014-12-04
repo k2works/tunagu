@@ -2,7 +2,8 @@ source "https://rubygems.org/"
 
 # App Stack
 gem "sinatra", "~> 1.4"
-#gem "sinatra-activerecord"
+gem "sinatra-activerecord"
+gem 'pg'
 #gem "split",  github: "andrew/split"
 
 group :development do
