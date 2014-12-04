@@ -79,6 +79,10 @@ $ brew install postgresql
 $ bundle
 ```
 
+```bash
+$ bundle exec rake db:create_migration NAME=regist
+$ bundle exec rake db:migrate
+```
 ### A/BテストフレームワークSplit対応
 
 _Gemfile_
@@ -111,6 +115,12 @@ end
 ```
 
 ## <a name="3">デプロイ</a>
+
+```
+$ heroku create
+$ git push heroku master
+$ heroku apps:rename aiiiiiin
+```
 
 
 # 参照

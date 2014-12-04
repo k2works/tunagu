@@ -1,4 +1,6 @@
 require "sinatra/activerecord/rake"
+require "./config/initializers/database"
+require "./aiiiiiin"
 
 %w{ bundler find rake/testtask}.each { |lib| require lib }
 
