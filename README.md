@@ -129,5 +129,6 @@ $ heroku apps:rename aiiiiiin
 + [davatron5000/FitVids.js](https://github.com/davatron5000/FitVids.js)
 + [Hazel](http://c7.github.io/hazel/)
 + [Start Bootstrap](http://startbootstrap.com/template-overviews/landing-page/)
++ [Sinatra ActiveRecord Extension](https://github.com/janko-m/sinatra-activerecord)
 + [Sinatra+ActiveRecord+MySQLで、簡単APIサーバ構築](http://qiita.com/u1_fukui/items/88c10d4d530ec6fbaaa1)
 + [Sinatra-ActiverecordをHerokuにPushする](http://qiita.com/myokkie/items/6f65db5d53f19d34a27c)
