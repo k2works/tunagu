@@ -1,9 +1,10 @@
 source "https://rubygems.org/"
+ruby "2.1.5"
 
 # App Stack
 gem "sinatra", "~> 1.4"
-gem "sinatra-activerecord"
-gem "split",  github: "andrew/split"
+#gem "sinatra-activerecord"
+#gem "split",  github: "andrew/split"
 
 group :development do
   gem "rake", "~> 10.0"
