@@ -16,13 +16,6 @@ end
 # database config
 use ActiveRecord::ConnectionAdapters::ConnectionManagement
 
-# A/B testing config
-require 'split/dashboard'
-
-# Split::Dashboard.use Rack::Auth::Basic do |username, password|
-#   username == 'admin' && password == 'password'
-# end
-
 # Load app
 require "aiiiiiin"
 #run Aiiiiiin
