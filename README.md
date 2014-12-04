@@ -102,8 +102,9 @@ $ heroku addons:add redistogo
 
 ```
 $ heroku create
-$ git push heroku master
+$ git push heroku master:master
 $ heroku apps:rename aiiiiiin
+$ heroku open
 ```
 
 
