@@ -91,31 +91,13 @@ _Gemfile_
 gem "split",  github: "andrew/split"
 ```
 
-_config.ru_
-
-```ruby
-require 'split/dashboard'
-
-# Split::Dashboard.use Rack::Auth::Basic do |username, password|
-#   username == 'admin' && password == 'password'
-# end
-
-run Rack::URLMap.new \
-  "/"       => Aiiiiiin.new,
-  "/split" => Split::Dashboard.new
-```
-
+_config.ru_  
 _config/initializers/split.rb_
 
-```ruby
-require 'split'
-
-Split.configure do |config|
-end
-```
 ````bash
 $ heroku addons:add redistogo
 ```
+
 ## <a name="3">デプロイ</a>
 
 ```
