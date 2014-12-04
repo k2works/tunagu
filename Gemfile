@@ -4,7 +4,7 @@ source "https://rubygems.org/"
 gem "sinatra", "~> 1.4"
 gem "sinatra-activerecord"
 gem 'pg'
-#gem "split",  github: "andrew/split"
+gem "split",  github: "andrew/split"
 
 group :development do
   gem "rake", "~> 10.0"

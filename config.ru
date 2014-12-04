@@ -16,7 +16,8 @@ end
 # database config
 use ActiveRecord::ConnectionAdapters::ConnectionManagement
 
-#require 'split/dashboard'
+# A/B testing config
+require 'split/dashboard'
 
 # Split::Dashboard.use Rack::Auth::Basic do |username, password|
 #   username == 'admin' && password == 'password'
@@ -24,8 +25,8 @@ use ActiveRecord::ConnectionAdapters::ConnectionManagement
 
 # Load app
 require "aiiiiiin"
-run Aiiiiiin
+#run Aiiiiiin
 
-#run Rack::URLMap.new \
-#"/"       => Aiiiiiin.new,
-#"/split" => Split::Dashboard.new
+run Rack::URLMap.new \
+"/"       => Aiiiiiin.new,
+"/split" => Split::Dashboard.new
