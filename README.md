@@ -101,7 +101,6 @@ $ heroku addons:add redistogo
 ## <a name="3">デプロイ</a>
 
 ```
-$ heroku create
 $ git push heroku master
 $ heroku apps:rename aiiiiiin
 ```
@@ -117,3 +116,4 @@ $ heroku apps:rename aiiiiiin
 + [Sinatra+ActiveRecord+MySQLで、簡単APIサーバ構築](http://qiita.com/u1_fukui/items/88c10d4d530ec6fbaaa1)
 + [Sinatra-ActiverecordをHerokuにPushする](http://qiita.com/myokkie/items/6f65db5d53f19d34a27c)
 + [Use Split with Heroku RedisToGo](https://github.com/andrew/split/wiki/Use-Split-with-Heroku-RedisToGo)
++ [Font Awesome](http://fortawesome.github.io/Font-Awesome/get-started/)

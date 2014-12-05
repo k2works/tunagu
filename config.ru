@@ -18,7 +18,6 @@ use ActiveRecord::ConnectionAdapters::ConnectionManagement
 
 # Load app
 require "aiiiiiin"
-#run Aiiiiiin
 
 run Rack::URLMap.new \
 "/"       => Aiiiiiin.new,

@@ -11,7 +11,7 @@ guard 'livereload' do
   watch(%r{public/stylesheets/.+\.(css|s[ac]ss)$})
   watch(%r{public/javascripts/.+\.(js|coffee)$})
   watch(%r{views/.+\.(erb|haml|slim|s[ac]ss|coffee)$})
-  watch(%r{.+\.(rb)$})
+  watch(%r{.+\.(rb|ru)$})
 end
 
 guard :shotgun, server: "thin", host: "0.0.0.0", port: "9292" do
