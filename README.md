@@ -95,7 +95,7 @@ _config.ru_
 _config/initializers/split.rb_
 
 ````bash
-$ heroku addons:add redistogo
+$ heroku addons:add redistogo~
 ```
 
 ## <a name="3">デプロイ</a>
