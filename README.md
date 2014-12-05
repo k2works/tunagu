@@ -117,3 +117,4 @@ $ heroku apps:rename aiiiiiin
 + [Sinatra-ActiverecordをHerokuにPushする](http://qiita.com/myokkie/items/6f65db5d53f19d34a27c)
 + [Use Split with Heroku RedisToGo](https://github.com/andrew/split/wiki/Use-Split-with-Heroku-RedisToGo)
 + [Font Awesome](http://fortawesome.github.io/Font-Awesome/get-started/)
++ [はじめてのSinatra](http://parrot.hatenadiary.jp/entry/20091211/1260503235)

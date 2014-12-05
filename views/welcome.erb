@@ -3,10 +3,10 @@
     <div class="col-lg-12 text-center v-center">
       <h1 class="" contenteditable="false">Aiiiiiin</h1>
 
-      <p class="lead" contenteditable="false">ストレスフリーなやること通知サービス</p>
+      <p class="lead" contenteditable="false"><%= @vision_copy %></p>
       <div class="fb-like" data-href="https://aiiiiiin.herokuapp.com/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
       <div class="vendor">
-      <iframe width="840" height="630" src="//www.youtube.com/embed/cpifXF_yI1M" frameborder="0" allowfullscreen　class="col-lg-6 text-center v-center"></iframe>
+        <iframe width="840" height="630" src="//www.youtube.com/embed/<%= @youtubu %>" frameborder="0" allowfullscreen　class="col-lg-6 text-center v-center"></iframe>
       </div>
       <form action="/regist" method="post">
       <div class="input-group input-group-lg col-sm-offset-4 col-sm-4">
@@ -14,7 +14,6 @@
         placeholder="サービスが始まったらメール通知を受ける"> <span class="input-group-btn"><button  type="submit" class="btn btn-lg btn-primary" type="button">OK</button></span>
       </div>
       </form>
-
     </div>
 
   </div>
@@ -42,7 +41,7 @@
     <div class="col-md-4">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="" contenteditable="false">登録する</h3>
+          <h3 class="" contenteditable="false"><%= @block01_titile %></h3>
           <ul class="list-inline intro-social-buttons">
             <li><a href="/ok/<%= @setting %>/block01" class="btn btn-default btn-lg"><i class='fa fa-thumbs-up'></i><span class='label label-success'><%= @ok_base_block01_count %></span></a>
             </li>
@@ -50,17 +49,15 @@
             </li>
           </ul>
         </div>
-        <div class="panel-body">
-          友達にあった時借りた物を返す必要はありませんか？仕事で取引先の人にあった時に確認したいことや
-          渡しておきたい資料はありませんか？<br>
-          そんな時はAiiiiiinに相手の名前と会った時にやることを登録してきましょう。
+          <div class="panel-body">
+            <%= @block01_body %>
           </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="" contenteditable="false">Aiiiiiinする</h3>
+            <h3 class="" contenteditable="false"><%= @block02_titile %></h3>
             <ul class="list-inline intro-social-buttons">
               <li><a href="/ok/<%= @setting %>/block02" class="btn btn-default btn-lg"><i class='fa fa-thumbs-up'></i><span class='label label-success'><%= @ok_base_block02_count %></span></a>
               </li>
@@ -68,18 +65,15 @@
               </li>
             </ul>
           </div>
-          <div class="panel-body">
-            やることを登録すれば後はなにもする必要はありません。その人に会った時にAiiiiiinがあなたに通知してくれるのです。
-            もうメモ帳に忘れないようにメモする必要も何かやることはなかったか心配する必要はありません。<br>
-            Aiiiiiinがあなたの代わりに誰に合った時何をするのかを教えてくれるのです！やるべきことを登楼したら後は忘れてしまいましょう！
-            大丈夫、その時になったらAiiiiiinが教えてくれます。
+            <div class="panel-body">
+              <%= @block02_body %>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="panel panel-default">
             <div class="panel-heading">
-              <h3 class="" contenteditable="false">ハッピーになる</h3>
+              <h3 class="" contenteditable="false"><%= @block03_titile %></h3>
               <ul class="list-inline intro-social-buttons">
                 <li><a href="/ok/<%= @setting %>/block03" class="btn btn-default btn-lg"><i class='fa fa-thumbs-up'></i><span class='label label-success'><%= @ok_base_block03_count %></span></a>
                 </li>
@@ -87,9 +81,8 @@
                 </li>
               </ul>
             </div>
-            <div class="panel-body">
-              面倒なことはAiiiiiinに任せてより本質的なことに集中しましょう。<br>
-              Aiiiiiinは日常の煩わしさからあなたを開放しよりハッピーな人生を送るお手伝いをします。
+              <div class="panel-body">
+                <%= @block03_body %>
               </div>
             </div>
           </div>
