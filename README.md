@@ -95,7 +95,7 @@ _config.ru_
 _config/initializers/split.rb_
 
 ````bash
-$ heroku addons:add redistogo
+$ heroku addons:add redistogo~
 ```
 
 ## <a name="3">デプロイ</a>
@@ -118,3 +118,4 @@ $ heroku open
 + [Sinatra+ActiveRecord+MySQLで、簡単APIサーバ構築](http://qiita.com/u1_fukui/items/88c10d4d530ec6fbaaa1)
 + [Sinatra-ActiverecordをHerokuにPushする](http://qiita.com/myokkie/items/6f65db5d53f19d34a27c)
 + [Use Split with Heroku RedisToGo](https://github.com/andrew/split/wiki/Use-Split-with-Heroku-RedisToGo)
++ [Font Awesome](http://fortawesome.github.io/Font-Awesome/get-started/)

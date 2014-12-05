@@ -11,6 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141204102131) do
+ActiveRecord::Schema.define(version: 20141205052013) do
+
+  create_table "metrics", force: true do |t|
+    t.string  "case"
+    t.string  "block"
+    t.string  "pattern"
+    t.integer "count"
+  end
+
+  create_table "regists", force: true do |t|
+    t.string "email"
+  end
 
 end

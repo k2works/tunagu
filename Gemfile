@@ -5,6 +5,7 @@ gem "sinatra", "~> 1.4"
 gem "sinatra-activerecord"
 gem 'pg'
 gem "split",  github: "andrew/split"
+gem 'pry'
 
 group :development do
   gem "rake", "~> 10.0"
