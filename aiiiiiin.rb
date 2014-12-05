@@ -8,7 +8,7 @@ class Aiiiiiin < Sinatra::Base
     @vision_copy = 'ストレスフリーなやること通知サービス'
     @thanks = <<-'MSG'
     Thank you!</h2>
-    <p class="lead">ご協力ありがとうございます。頂いたご意見を元に更にサービスを改善させて行きたいと思います。</p>
+    <p class="lead">ご協力ありがとうございます。サービス開始時にはご登録いただいたメールアドレスにご連絡させていただきます。</p>
     </div>
     MSG
     @base = 'base'
@@ -30,6 +30,14 @@ class Aiiiiiin < Sinatra::Base
 
     erb :welcome
   end
+
+  post "/regist" do
+    regist = Regist.new
+    regist[:email] = params[:email]
+    regist.save
+    erb :thanks
+  end
+
 
   get '/ok/:case/:block' do |arg1,arg2|
     set_ok_metric(arg1,arg2)
@@ -81,4 +89,8 @@ end
 
 class Metric < ActiveRecord::Base
 
+end
+
+class Regist < ActiveRecord::Base
+  validates_presence_of :email
 end
