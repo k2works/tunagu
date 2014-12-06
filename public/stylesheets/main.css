@@ -82,6 +82,11 @@ object {
 
 .pt20{padding-top: 20px !important;}
 
+.prl40 {
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+}
+
 /* module end */
 
 .btnStyle{
