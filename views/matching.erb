@@ -17,7 +17,12 @@
         </div>
         
         <br>
-        
+
+       <% chats.each do |name, body| %>
+         <div>
+           <%= name %> : <%= body %>
+         </div>
+       <% end %>
         <a href="/talk/teach" class="btn btn-default btnStyle">教えてください！！</a>
         
       </div>
