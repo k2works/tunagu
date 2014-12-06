@@ -93,12 +93,14 @@ class Tunaguu < Sinatra::Base
   end
 
   get "/notify" do
+    @@society ||= ""
     @society = @@society
     erb :notify
   end
 
   get "/matching" do
     @chats = chats
+    @@society ||= ""
     @society = @@society
     erb :matching
   end
