@@ -1,4 +1,4 @@
-class Aiiiiiin < Sinatra::Base
+class Tunaguu < Sinatra::Base
   register Sinatra::ActiveRecordExtension
   enable :sessions
   helpers Split::Helper

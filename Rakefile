@@ -2,7 +2,7 @@ require "bundler"
 Bundler.require
 require "sinatra/activerecord/rake"
 require "./config/initializers/database"
-require "./aiiiiiin"
+require "./tunaguu"
 
 %w{ bundler find rake/testtask}.each { |lib| require lib }
 

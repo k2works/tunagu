@@ -17,7 +17,7 @@ end
 use ActiveRecord::ConnectionAdapters::ConnectionManagement
 
 # Load app
-require "aiiiiiin"
+require "tunaguu"
 
 run Rack::URLMap.new \
 "/"       => Aiiiiiin.new,
