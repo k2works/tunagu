@@ -7,7 +7,7 @@ class Tunaguu < Sinatra::Base
 
   before do
     @vision = 'やることのストレスを無くす'
-    @vision_copy = 'ストレスフリーなやること通知サービス'
+    @vision_copy = 'やることは登録するだけ'
     @thanks = <<-'MSG'
     Thank you!</h2>
     <p class="lead">ご協力ありがとうございます。サービス開始時にはご登録いただいたメールアドレスにご連絡させていただきます。</p>
@@ -28,34 +28,30 @@ class Tunaguu < Sinatra::Base
 
     case @setting
     when @base
-      @youtubu = ab_test('base_youtubu', 'cpifXF_yI1M', 'cpifXF_yI1M', 'cpifXF_yI1M')
+      @youtubu_biz = ab_test('base_youtubu_biz', 'OVRvD-pA1y4', 'OVRvD-pA1y4')
+      @youtubu_std = ab_test('base_youtubu_std', 'j9SNAUHnwEU', 'j9SNAUHnwEU')
 
-      @block01_titile = ab_test('base_block01', '登録', '登録する', 'やっていみる')
+      @block01_titile = ab_test('base_block01', '登録', '登録する')
 
       @block01_body_type1 = <<-'MSG'
-      友達にあった時借りた物を返す必要はありませんか？仕事で取引先の人にあった時に確認したいことや
-      渡しておきたい資料はありませんか？<br>
-      そんな時はAiiiiiinに相手の名前と会った時にやることを登録してきましょう。
+      やることはサービスに登録して自分の解決したい問題を登録するだけ。
       MSG
 
       @block01_body = @block01_body_type1
 
-      @block02_titile = ab_test('base_block02', 'Aiiiiiin', 'Aiiiiiinする', '知らせを受ける')
+      @block02_titile = ab_test('base_block02', 'TUNAGUU', '通知を受ける')
 
       @block02_body_type1 = <<-'MSG'
-      やることを登録すれば後はなにもする必要はありません。その人に会った時にAiiiiiinがあなたに通知してくれるのです。
-      もうメモ帳に忘れないようにメモする必要も何かやることはなかったか心配する必要はありません。<br>
-      Aiiiiiinがあなたの代わりに誰に合った時何をするのかを教えてくれるのです！やるべきことを登楼したら後は忘れてしまいましょう！
-      大丈夫、その時になったらAiiiiiinが教えてくれます。
+      登録が完了したらあとは問題を解決してくれそうな場所に行くだけ！
+      そこに問題を解決してくれ
       MSG
 
       @block02_body = @block02_body_type1
 
-      @block03_titile = ab_test('base_block03', 'ハッピー', 'ハッピーになる', 'いいようになる')
+      @block03_titile = ab_test('base_block03', 'ハッピー', 'ハッピーになる')
 
       @block03_body_type1 = <<-'MSG'
-      面倒なことはAiiiiiinに任せてより本質的なことに集中しましょう。<br>
-      Aiiiiiinは日常の煩わしさからあなたを開放しよりハッピーな人生を送るお手伝いをします。
+      TUNAGUUは日々の問題からあなたを開放しよりハッピーな人生を送るお手伝いをします。
       MSG
 
       @block03_body = @block03_body_type1
@@ -77,6 +73,7 @@ class Tunaguu < Sinatra::Base
   end
 
   post "/student" do
+    finished(@setting+'_youtubu_std')
     redirect "/thanks"
   end
 
@@ -85,6 +82,7 @@ class Tunaguu < Sinatra::Base
   end
 
   post "/society" do
+    finished(@setting+'_youtubu_biz')
     redirect "/thanks"
   end
 
