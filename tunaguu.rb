@@ -28,8 +28,8 @@ class Tunaguu < Sinatra::Base
 
     case @setting
     when @base
-      @youtubu_biz = ab_test('base_youtubu_biz', 'OVRvD-pA1y4', 'OVRvD-pA1y4')
-      @youtubu_std = ab_test('base_youtubu_std', 'j9SNAUHnwEU', 'j9SNAUHnwEU')
+      @youtubu_biz = ab_test('base_youtubu_biz', 'OVRvD-pA1y4')
+      @youtubu_std = ab_test('base_youtubu_std', 'j9SNAUHnwEU')
 
       @block01_titile = ab_test('base_block01', '登録', '登録する')
 
@@ -42,8 +42,8 @@ class Tunaguu < Sinatra::Base
       @block02_titile = ab_test('base_block02', 'TUNAGUU', '通知を受ける')
 
       @block02_body_type1 = <<-'MSG'
-      登録が完了したらあとは問題を解決してくれそうな場所に行くだけ！
-      そこに問題を解決してくれ
+      登録が完了したらあとは問題を解決してくれそうな場所に行くだけ！<br>
+      そこに問題を解決してくれる人がいればTUNAGUUが通知してくれます。
       MSG
 
       @block02_body = @block02_body_type1
