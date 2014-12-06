@@ -84,6 +84,10 @@ class Tunaguu < Sinatra::Base
     erb :society
   end
 
+  post "/society" do
+    redirect "/thanks"
+  end
+
   get "/checkin" do
     erb :checkin
   end
