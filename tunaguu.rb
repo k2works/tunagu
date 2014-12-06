@@ -162,6 +162,14 @@ class Tunaguu < Sinatra::Base
     erb :thanks
   end
 
+  get "/clear" do
+    @@chats = []
+    @@society = "うえはそ"
+    @@student = "学生"
+    ""
+  end
+
+
   def set_ok_metric(metric_type,block)
     metric = Metric.where(case: metric_type,block: block, pattern: 'OK')
     if metric.empty?
@@ -207,11 +215,6 @@ class Tunaguu < Sinatra::Base
     @@society ||= "うえはそ"
   end
 
-  def clear
-    @@chats = []
-    @@society = "うえはそ"
-    @@student = "学生"
-  end
 end
 
 class Metric < ActiveRecord::Base
