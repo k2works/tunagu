@@ -100,8 +100,12 @@ class Tunaguu < Sinatra::Base
     erb :matching
   end
 
-  get "/talk/:id" do
+  get "/talk" do
     erb :talk
+  end
+
+  get "/talk/teach" do
+    chats << [@society, "教えてください！！"]
   end
 
 
@@ -160,6 +164,16 @@ class Tunaguu < Sinatra::Base
     metric[:block] = block
     metric[:pattern] = pattern
     metric[:count] = 1
+  end
+
+  def chats
+    @chats ||= []
+  end
+
+  def clear
+    @chats = []
+    @society = "うえはそ"
+    @student = "学生"
   end
 end
 
