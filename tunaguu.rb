@@ -1,4 +1,4 @@
- class Tunaguu < Sinatra::Base
+class Tunaguu < Sinatra::Base
   register Sinatra::ActiveRecordExtension
   enable :sessions
   helpers Split::Helper
@@ -97,7 +97,7 @@
   end
 
   get "/matching" do
-    @chats =chats
+    @chats = chats
     erb :matching
   end
 
@@ -106,7 +106,7 @@
   end
 
   get "/talk/teach" do
-    chats << [@student, "教えてください！！"]
+    chats << [:me, @student, "教えてください！！"]
     redirect "/matching"
   end
 
