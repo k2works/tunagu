@@ -123,6 +123,16 @@ class Tunaguu < Sinatra::Base
     redirect "/matching#btm"
   end
 
+  get "/ura/like" do
+    chats << [:you, student, "いいよ！"]
+    redirect "/matching#btm"
+  end
+
+  get "/ura/sorry" do
+    chats << [:you, student, "ごめんなさい"]
+    redirect "/matching#btm"
+  end
+
 
   get '/ok/:case/:block' do |arg1,arg2|
     set_ok_metric(arg1,arg2)
