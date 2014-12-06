@@ -72,6 +72,30 @@ class Aiiiiiin < Sinatra::Base
     erb :thanks
   end
 
+  get "/student" do
+    erb :student
+  end
+
+  get "/society" do
+    erb :society
+  end
+
+  get "/checkin" do
+    erb :checkin
+  end
+
+  get "/notify" do
+    erb :notify
+  end
+
+  get "/matching" do
+    erb :matching
+  end
+
+  get "/talk/:id" do
+    erb :talk
+  end
+
 
   get '/ok/:case/:block' do |arg1,arg2|
     set_ok_metric(arg1,arg2)
