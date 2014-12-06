@@ -74,6 +74,7 @@ class Tunaguu < Sinatra::Base
 
   post "/student" do
     finished(@setting+'_youtubu_std')
+    @@student = params[:name]
     redirect "/thanks"
   end
 
@@ -83,6 +84,7 @@ class Tunaguu < Sinatra::Base
 
   post "/society" do
     finished(@setting+'_youtubu_biz')
+    @@society = params[:name]
     redirect "/thanks"
   end
 
@@ -91,11 +93,13 @@ class Tunaguu < Sinatra::Base
   end
 
   get "/notify" do
+    @society = @@society
     erb :notify
   end
 
   get "/matching" do
     @chats = chats
+    @society = @@society
     erb :matching
   end
 
