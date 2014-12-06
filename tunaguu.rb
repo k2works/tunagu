@@ -124,13 +124,13 @@ class Tunaguu < Sinatra::Base
   end
 
   get "/ura/like" do
-    chats << [:you, student, "いいよ！"]
-    redirect "/matching#btm"
+    chats << [:you, society, "いいよ！"]
+    ""
   end
 
   get "/ura/sorry" do
-    chats << [:you, student, "ごめんなさい"]
-    redirect "/matching#btm"
+    chats << [:you, society, "ごめんなさい"]
+    ""
   end
 
 
