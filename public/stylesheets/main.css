@@ -81,3 +81,7 @@ object {
 .mb60{margin-bottom: 60px !important;}
 
 /* module end */
+
+.btnStyle{
+  color: #333 !important;
+}
