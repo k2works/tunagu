@@ -17,8 +17,8 @@ end
 use ActiveRecord::ConnectionAdapters::ConnectionManagement
 
 # Load app
-require "tunaguu"
+require "./tunaguu"
 
 run Rack::URLMap.new \
-"/"       => Aiiiiiin.new,
+"/"       => Tunaguu.new,
 "/split" => Split::Dashboard.new
