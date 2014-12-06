@@ -106,7 +106,7 @@ class Tunaguu < Sinatra::Base
   end
 
   get "/talk/teach" do
-    chats << [:me, @student, "教えてください！！"]
+    chats << [:me, student, "教えてください！！"]
     redirect "/matching"
   end
 
@@ -170,6 +170,14 @@ class Tunaguu < Sinatra::Base
 
   def chats
     @@chats ||= []
+  end
+
+  def student
+    @@student ||= "学生"
+  end
+
+  def society
+    @@society ||= "うえはそ"
   end
 
   def clear

@@ -19,7 +19,7 @@
 
        <% @chats.each do |style, name, body| %>
         <div class="userInfo">
-          <% if style == :you %>
+          <% if style == :me %>
           <table>
               <tr>
                   <td><%= name %>さん<br>
@@ -36,6 +36,7 @@
 		  <%= body %></td>
               </tr>
           </table>
+	  <% end %>
         </div>
 
        <% end %>
