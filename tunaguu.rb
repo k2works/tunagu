@@ -30,6 +30,7 @@ class Tunaguu < Sinatra::Base
     when @base
       @youtubu_biz = ab_test('base_youtubu_biz', 'OVRvD-pA1y4')
       @youtubu_std = ab_test('base_youtubu_std', 'j9SNAUHnwEU')
+      @youtubu_demo = ab_test('base_youtubu_demo', 'GtsQbvPrrBI')
 
       @block01_titile = ab_test('base_block01', '登録', '登録する')
 
