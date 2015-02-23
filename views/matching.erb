@@ -1,3 +1,6 @@
+<script type="text/javascript" language="javascript">
+  setTimeout("location.reload()",2000);
+</script>
 <div class="container-full target pb30">
   <div class="row">
     <div class="col-lg-12 text-center v-center">
@@ -11,7 +14,7 @@
           <table>
               <tr>
                   <th class="alignL"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR6Pj285eaOTx8KOXXiXJlbNhNZ79XJQ6XagdeeWhwPmo1cbo8ExA" width="100" height="100" alt=""></th>
-                  <td>うえはそさん情報<br>
+                  <td><%= @society %>情報<br>
                   CSSのことならなんでも教えるよ！</td>
               </tr>
           </table>
@@ -22,7 +25,7 @@
           <% if style == :me %>
           <table>
               <tr>
-                  <td><%= name %>さん<br>
+                  <td><%= name %><br>
 		  <%= body %>
                   </td>
                     <th class="alignL"><img src="https://pbs.twimg.com/profile_images/2754435592/6fef2556bc06febd5c6ab4c24ae08282_400x400.jpeg" width="100" height="100" alt=""></th>
@@ -31,8 +34,8 @@
 	 <% else %>
           <table>
               <tr>
-                  <th class="alignL"><img src="https://pbs.twimg.com/profile_images/2754435592/6fef2556bc06febd5c6ab4c24ae08282_400x400.jpeg" width="100" height="100" alt=""></th>
-                  <td><%= name %><br>
+                  <th class="alignL"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR6Pj285eaOTx8KOXXiXJlbNhNZ79XJQ6XagdeeWhwPmo1cbo8ExA" width="100" height="100" alt=""></th>
+                  <td><%= name %>さん<br>
 		  <%= body %></td>
               </tr>
           </table>
@@ -44,7 +47,7 @@
        <div class="pt20 mb40">
           <a href="/talk/teach" class="btn btn-default btnStyle">教えてください！！</a>
           <a href="/talk/friends" class="btn btn-default btnStyle">友達になってください。</a>
-          <a href="/talk/like" class="btn btn-default btnStyle">いいね!</a>
+          <a href="/talk/like" class="btn btn-default btnStyle">いいよ!</a>
           <a href="/talk/sorry" class="btn btn-default btnStyle">ごめんなさい。</a>
           <a id="btm"></a>
         </div>

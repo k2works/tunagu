@@ -75,6 +75,7 @@ class Tunaguu < Sinatra::Base
 
   post "/student" do
     finished(@setting+'_youtubu_std')
+    @@student = params[:name]
     redirect "/thanks"
   end
 
@@ -84,6 +85,7 @@ class Tunaguu < Sinatra::Base
 
   post "/society" do
     finished(@setting+'_youtubu_biz')
+    @@society = params[:name]
     redirect "/thanks"
   end
 
@@ -92,11 +94,15 @@ class Tunaguu < Sinatra::Base
   end
 
   get "/notify" do
+    @@society ||= ""
+    @society = @@society
     erb :notify
   end
 
   get "/matching" do
     @chats = chats
+    @@society ||= ""
+    @society = @@society
     erb :matching
   end
 
@@ -125,13 +131,13 @@ class Tunaguu < Sinatra::Base
   end
 
   get "/ura/like" do
-    chats << [:you, student, "いいよ！"]
-    redirect "/matching#btm"
+    chats << [:you, society, "いいよ！"]
+    ""
   end
 
   get "/ura/sorry" do
-    chats << [:you, student, "ごめんなさい"]
-    redirect "/matching#btm"
+    chats << [:you, society, "ごめんなさい"]
+    ""
   end
 
 
@@ -158,6 +164,14 @@ class Tunaguu < Sinatra::Base
   get "/thanks" do
     erb :thanks
   end
+
+  get "/clear" do
+    @@chats = []
+    @@society = "うえはそ"
+    @@student = "学生"
+    ""
+  end
+
 
   def set_ok_metric(metric_type,block)
     metric = Metric.where(case: metric_type,block: block, pattern: 'OK')
@@ -204,11 +218,6 @@ class Tunaguu < Sinatra::Base
     @@society ||= "うえはそ"
   end
 
-  def clear
-    @@chats = []
-    @@society = "うえはそ"
-    @@student = "学生"
-  end
 end
 
 class Metric < ActiveRecord::Base
